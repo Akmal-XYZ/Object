@@ -1,0 +1,99 @@
+
+
+<h1
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mapping-Comunity</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+				<center>
+				<div class="logo-container">
+   <img src="../tim.png" width="200" border=" 1px solid #00ffee">
+</div>
+</center>
+				<br>
+			
+				<center>
+<input type="file" id="fileInput">
+<div id="result"></div>
+</center>
+<script src="script.js"></script>
+
+</body>
+</html>
+
+<style>
+				body {
+  font-family: Arial, sans-serif;
+}
+
+#result {
+  margin-top: 20px;
+}
+  
+    input {
+            background-color: #3dc185;
+            color: white;
+            padding: 10px 10px; 
+            margin: 7px 0px;
+            border: none;
+            cursor: pointer;
+            width: 30px 50px
+            font-size: 16px;
+            border-radius: 4px;
+            
+            }
+</style>
+
+<script>
+				const fileInput = document.getElementById('fileInput');
+const resultDiv = document.getElementById('result');
+
+fileInput.addEventListener('change', function() {
+  const file = fileInput.files[0];
+  if (file) {
+    const reader = new FileReader();
+    
+    reader.onload = function(e) {
+      const content = e.target.result;
+      const count = content.match(/tmpobjid/gi).length || 0;
+      resultDiv.textContent = `JUMLAH OBJECT : ${count}`;
+    };
+    
+    reader.readAsText(file);
+  } else {
+    resultDiv.textContent = 'Pilih file terlebih dahulu';
+  }
+});
+</script>
+
+<style> @keyframes colorBlink { 0%, 100% { color: #33ff00; 
+				
+  text-shadow: 0 0 20px #33ff00; } 33% { color: #33ff00; text-shadow: 0 0 20px #33ff00; } 66% { color: #33ff00; text-shadow: 0 0 20px #33ff00; } } h1 { animation: colorBlink 3s infinite; } </style>
+  
+  
+  <style>
+  				
+    body {
+      background-image: url('https://mapping-shop-gta-samp.vercel.app/kont.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+  </style> 
+  
+  <!DOCTYPE html>
+<html>
+<head>
+<style>
+
+
+</body>
+</html>
+
+
+
